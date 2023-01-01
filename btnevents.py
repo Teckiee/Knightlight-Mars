@@ -125,6 +125,17 @@ def loadlocations():
         count += 1
     f.close()
 
+def loadlocationsloadtest():
+    count = 0
+    while count < 2000:
+        btnLights.append(btnProperties())
+        i = len(btnLights)-1
+        btnLights[i].set_x(0)
+        btnLights[i].set_y(0)
+        btnLights[i].set_type('profile')
+        addlight(i)
+        count += 1
+
 def addlight(i):
     if btnLights[i].get_type() == 'parcan':
         img1 = img_parcan

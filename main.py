@@ -20,7 +20,7 @@ window.overrideredirect(True)
 loadlocations()
 
 
-
+#loadlocationsloadtest()
 
 
 btnexit = tk.Button(
