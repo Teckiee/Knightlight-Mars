@@ -20,10 +20,8 @@ window.overrideredirect(True)
 loadlocations()
 
 
-#i = 0
-#while i < len(btnLights):
-#    addlight(i)
-#    i += 1
+
+
 
 btnexit = tk.Button(
 master=frame1,
@@ -50,6 +48,7 @@ bg='black',
 fg="white",
 width=10,
 height=4,
+font=addfont
 )
 btnaddparcan.bind("<Button-1>", clickbtnaddparcan)
 btnaddparcan.place(x=20, y=1400)
@@ -61,6 +60,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddfresnel.bind("<Button-1>", clickbtnaddfresnel)
 btnaddfresnel.place(x=100, y=1400)
@@ -72,6 +72,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddwedge.bind("<Button-1>", clickbtnaddwedge)
 btnaddwedge.place(x=180, y=1400)
@@ -84,6 +85,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddwashmovinghead.bind("<Button-1>", clickbtnaddwashmovinghead)
 btnaddwashmovinghead.place(x=260, y=1400)
@@ -96,6 +98,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddmirrorball.bind("<Button-1>", clickbtnaddmirrorball)
 btnaddmirrorball.place(x=340, y=1400)
@@ -108,6 +111,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddledsinglefloor.bind("<Button-1>", clickbtnaddledsinglefloor)
 btnaddledsinglefloor.place(x=420, y=1400)
@@ -120,6 +124,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddledparcan.bind("<Button-1>", clickbtnaddledparcan)
 btnaddledparcan.place(x=500, y=1400)
@@ -132,6 +137,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
+font=addfont
 )
 btnaddprofile.bind("<Button-1>", clickbtnaddprofile)
 btnaddprofile.place(x=580, y=1400)

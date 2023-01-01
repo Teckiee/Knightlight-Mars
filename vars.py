@@ -2,6 +2,7 @@
 from tkinter import *
 from PIL import Image, ImageTk
 import platform
+from tkinter import font as tkFont  # for convenience
 
 #yoffset = 31 # titlebar
 yoffset = 0 # titlebar
@@ -10,9 +11,6 @@ xoffset = 1
 
 print(platform.system())
 
-i_addbuttonoffsetx = 0
-if platform.system() == 'Linux':
-    i_addbuttonoffsetx = 2
 
 #i_buttonx = 0
 i_parcanwidth = 33
@@ -53,6 +51,12 @@ btnLights = []
 bgcolor = "#434343"
 
 window = Tk()
+
+i_addbuttonoffsetx = 0
+addfont = tkFont.Font (family='Segoe UI', size=9)
+
+if platform.system() == 'Linux':
+    addfont = tkFont.Font(family='Segoe UI', size=8)
 
 
 imageparcan = Image.open('parcan.png')
