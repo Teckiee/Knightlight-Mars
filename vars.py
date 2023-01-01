@@ -17,11 +17,11 @@ bgcolor = "#434343"
 window = Tk()
 
 
-image = Image.open('C:\Google Drive\mark@wattsofsound\My Drive\GitHub\Knightlight-Mars\parcan.png')
+image = Image.open('parcan.png')
 img=image.resize((i_buttonwidth, i_buttonheight))
 img_parcan = ImageTk.PhotoImage(img)
 
-image2 = Image.open('C:/Google Drive/mark@wattsofsound/My Drive/GitHub/Knightlight-Mars/fresnel.png')
+image2 = Image.open('fresnel.png')
 img2=image2.resize((i_buttonwidth, i_buttonheight))
 img_fresnel = ImageTk.PhotoImage(img2)
 
