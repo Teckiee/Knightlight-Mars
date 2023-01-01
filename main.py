@@ -31,7 +31,7 @@ fg="black",
 font=btnfont
 )
 btnexit.bind("<Button-1>", quitme)
-btnexit.place(x=860, y=8)
+btnexit.place(x=860-i_addbuttonoffsetx, y=8)
 
 btnsave = tk.Button(
 master=frame1,
@@ -41,7 +41,7 @@ fg="black",
 font=btnfont
 )
 btnsave.bind("<Button-1>", savelocations)
-btnsave.place(x=860, y=60)
+btnsave.place(x=860-i_addbuttonoffsetx, y=60)
 
 btnaddparcan = tk.Button(
 master=frame1,
