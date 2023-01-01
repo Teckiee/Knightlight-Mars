@@ -25,7 +25,6 @@ loadlocations()
 #    addlight(i)
 #    i += 1
 
-
 btnexit = tk.Button(
 master=frame1,
 text='quit',
@@ -60,7 +59,7 @@ master=frame1,
 text='Add Fresnel',
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddfresnel.bind("<Button-1>", clickbtnaddfresnel)
@@ -71,7 +70,7 @@ master=frame1,
 text='Add wedge',
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddwedge.bind("<Button-1>", clickbtnaddwedge)
@@ -83,7 +82,7 @@ text='Add wash moving head',
 wraplength=80,
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddwashmovinghead.bind("<Button-1>", clickbtnaddwashmovinghead)
@@ -95,7 +94,7 @@ text='Add mirrorball',
 wraplength=80,
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddmirrorball.bind("<Button-1>", clickbtnaddmirrorball)
@@ -107,7 +106,7 @@ text='Add led single floor',
 wraplength=80,
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddledsinglefloor.bind("<Button-1>", clickbtnaddledsinglefloor)
@@ -119,7 +118,7 @@ text='Add led parcan',
 wraplength=80,
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddledparcan.bind("<Button-1>", clickbtnaddledparcan)
@@ -131,7 +130,7 @@ text='Add profile',
 wraplength=80,
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
 )
 btnaddprofile.bind("<Button-1>", clickbtnaddprofile)

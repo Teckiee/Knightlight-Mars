@@ -1,10 +1,18 @@
 #import tkinter as tk
 from tkinter import *
 from PIL import Image, ImageTk
+import platform
 
 #yoffset = 31 # titlebar
 yoffset = 0 # titlebar
 xoffset = 1
+
+
+print(platform.system())
+
+i_addbuttonoffsetx = 0
+if platform.system() == 'Linux':
+    i_addbuttonoffsetx = 2
 
 #i_buttonx = 0
 i_parcanwidth = 33
