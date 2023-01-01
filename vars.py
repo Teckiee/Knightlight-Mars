@@ -53,10 +53,11 @@ bgcolor = "#434343"
 window = Tk()
 
 i_addbuttonoffsetx = 0
-addfont = tkFont.Font (family='Segoe UI', size=9)
+btnfont = tkFont.Font (family='Segoe UI', size=9)
 
 if platform.system() == 'Linux':
-    addfont = tkFont.Font(family='Segoe UI', size=8)
+    i_addbuttonoffsetx = 2
+    btnfont = tkFont.Font(family='Segoe UI', size=8)
 
 
 imageparcan = Image.open('parcan.png')

@@ -28,6 +28,7 @@ master=frame1,
 text='quit',
 bg=bgcolor,
 fg="black",
+font=btnfont
 )
 btnexit.bind("<Button-1>", quitme)
 btnexit.place(x=860, y=8)
@@ -37,6 +38,7 @@ master=frame1,
 text='save',
 bg=bgcolor,
 fg="black",
+font=btnfont
 )
 btnsave.bind("<Button-1>", savelocations)
 btnsave.place(x=860, y=60)
@@ -46,9 +48,9 @@ master=frame1,
 text='Add Parcan',
 bg='black',
 fg="white",
-width=10,
+width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddparcan.bind("<Button-1>", clickbtnaddparcan)
 btnaddparcan.place(x=20, y=1400)
@@ -60,7 +62,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddfresnel.bind("<Button-1>", clickbtnaddfresnel)
 btnaddfresnel.place(x=100, y=1400)
@@ -72,7 +74,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddwedge.bind("<Button-1>", clickbtnaddwedge)
 btnaddwedge.place(x=180, y=1400)
@@ -85,7 +87,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddwashmovinghead.bind("<Button-1>", clickbtnaddwashmovinghead)
 btnaddwashmovinghead.place(x=260, y=1400)
@@ -98,7 +100,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddmirrorball.bind("<Button-1>", clickbtnaddmirrorball)
 btnaddmirrorball.place(x=340, y=1400)
@@ -111,7 +113,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddledsinglefloor.bind("<Button-1>", clickbtnaddledsinglefloor)
 btnaddledsinglefloor.place(x=420, y=1400)
@@ -124,7 +126,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddledparcan.bind("<Button-1>", clickbtnaddledparcan)
 btnaddledparcan.place(x=500, y=1400)
@@ -137,7 +139,7 @@ bg='black',
 fg="white",
 width=10-i_addbuttonoffsetx,
 height=4,
-font=addfont
+font=btnfont
 )
 btnaddprofile.bind("<Button-1>", clickbtnaddprofile)
 btnaddprofile.place(x=580, y=1400)
