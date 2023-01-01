@@ -25,23 +25,27 @@ loadlocations()
 
 btnexit = tk.Button(
 master=frame1,
-text='quit',
+text='Quit',
 bg=bgcolor,
 fg="black",
+width=4,
+height=1,
 font=btnfont
 )
 btnexit.bind("<Button-1>", quitme)
-btnexit.place(x=860-i_addbuttonoffsetx, y=8)
+btnexit.place(x=860-8-i_addbuttonoffsetx, y=8)
 
 btnsave = tk.Button(
 master=frame1,
-text='save',
+text='Save',
 bg=bgcolor,
 fg="black",
+width=4,
+height=1,
 font=btnfont
 )
 btnsave.bind("<Button-1>", savelocations)
-btnsave.place(x=860-i_addbuttonoffsetx, y=60)
+btnsave.place(x=860-8-i_addbuttonoffsetx, y=60)
 
 btnaddparcan = tk.Button(
 master=frame1,
