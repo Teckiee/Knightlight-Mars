@@ -42,6 +42,56 @@ def clickbtnaddfresnel(event):
     btnLights[i].set_type('fresnel')
     addlight(i)
 
+def clickbtnaddwedge(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('wedge')
+    addlight(i)
+
+def clickbtnaddwashmovinghead(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('washmovinghead')
+    addlight(i)
+
+def clickbtnaddledparcan(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('ledparcan')
+    addlight(i)
+
+def clickbtnaddmirrorball(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('mirrorball')
+    addlight(i)
+
+def clickbtnaddledsinglefloor(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('ledsinglefloor')
+    addlight(i)
+
+def clickbtnaddprofile(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('profile')
+    addlight(i)
+
+
+
 def savelocations(event):
     i = 0
     f = open("Settings.txt", "w")
@@ -84,6 +134,33 @@ def addlight(i):
         img1 = img_fresnel
         x = i_fresnelwidth
         y = i_fresnelheight
+    elif btnLights[i].get_type() == 'wedge':
+        img1 = img_wedge
+        x = i_wedgewidth
+        y = i_wedgeheight
+    elif btnLights[i].get_type() == 'washmovinghead':
+        img1 = img_washmovinghead
+        x = i_washmovingheadwidth
+        y = i_washmovingheadheight
+    elif btnLights[i].get_type() == 'mirrorball':
+        img1 = img_mirrorball
+        x = i_mirrorballwidth
+        y = i_mirrorballheight
+    elif btnLights[i].get_type() == 'ledsinglefloor':
+        img1 = img_ledsinglefloor
+        x = i_ledsinglefloorwidth
+        y = i_ledsinglefloorheight
+    elif btnLights[i].get_type() == 'ledparcan':
+        img1 = img_ledparcan
+        x = i_ledparcanwidth
+        y = i_ledparcanheight
+    elif btnLights[i].get_type() == 'profile':
+        img1 = img_profile
+        x = i_profilewidth
+        y = i_profileheight
+
+  
+
     btnLights[i].btnTheLight = tk.Button(
     #master=frame1,
     image=img1,

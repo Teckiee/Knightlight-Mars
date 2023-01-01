@@ -47,20 +47,97 @@ btnsave.place(x=860, y=60)
 btnaddparcan = tk.Button(
 master=frame1,
 text='Add Parcan',
-bg=bgcolor,
-fg="black",
+bg='black',
+fg="white",
+width=10,
+height=4,
 )
 btnaddparcan.bind("<Button-1>", clickbtnaddparcan)
-btnaddparcan.place(x=800, y=1400)
+btnaddparcan.place(x=20, y=1400)
 
 btnaddfresnel = tk.Button(
 master=frame1,
 text='Add Fresnel',
-bg=bgcolor,
-fg="black",
+bg='black',
+fg="white",
+width=10,
+height=4,
 )
 btnaddfresnel.bind("<Button-1>", clickbtnaddfresnel)
-btnaddfresnel.place(x=600, y=1400)
+btnaddfresnel.place(x=100, y=1400)
+
+btnaddwedge = tk.Button(
+master=frame1,
+text='Add wedge',
+bg='black',
+fg="white",
+width=10,
+height=4,
+)
+btnaddwedge.bind("<Button-1>", clickbtnaddwedge)
+btnaddwedge.place(x=180, y=1400)
+
+btnaddwashmovinghead = tk.Button(
+master=frame1,
+text='Add wash moving head',
+wraplength=80,
+bg='black',
+fg="white",
+width=10,
+height=4,
+)
+btnaddwashmovinghead.bind("<Button-1>", clickbtnaddwashmovinghead)
+btnaddwashmovinghead.place(x=260, y=1400)
+
+btnaddmirrorball = tk.Button(
+master=frame1,
+text='Add mirrorball',
+wraplength=80,
+bg='black',
+fg="white",
+width=10,
+height=4,
+)
+btnaddmirrorball.bind("<Button-1>", clickbtnaddmirrorball)
+btnaddmirrorball.place(x=340, y=1400)
+
+btnaddledsinglefloor = tk.Button(
+master=frame1,
+text='Add led single floor',
+wraplength=80,
+bg='black',
+fg="white",
+width=10,
+height=4,
+)
+btnaddledsinglefloor.bind("<Button-1>", clickbtnaddledsinglefloor)
+btnaddledsinglefloor.place(x=420, y=1400)
+
+btnaddledparcan = tk.Button(
+master=frame1,
+text='Add led parcan',
+wraplength=80,
+bg='black',
+fg="white",
+width=10,
+height=4,
+)
+btnaddledparcan.bind("<Button-1>", clickbtnaddledparcan)
+btnaddledparcan.place(x=500, y=1400)
+
+btnaddprofile = tk.Button(
+master=frame1,
+text='Add profile',
+wraplength=80,
+bg='black',
+fg="white",
+width=10,
+height=4,
+)
+btnaddprofile.bind("<Button-1>", clickbtnaddprofile)
+btnaddprofile.place(x=580, y=1400)
+
+
 
 
 
