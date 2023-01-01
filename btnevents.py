@@ -31,28 +31,33 @@ def clickbtnaddparcan(event):
     i = len(btnLights)-1
     btnLights[i].set_x(0)
     btnLights[i].set_y(0)
-    addlight(i,img_parcan)
+    btnLights[i].set_type('parcan')
+    addlight(i)
 
 def clickbtnaddfresnel(event):
     btnLights.append(btnProperties())
     i = len(btnLights)-1
     btnLights[i].set_x(0)
     btnLights[i].set_y(0)
-    addlight(i,img_fresnel)
+    btnLights[i].set_type('fresnel')
+    addlight(i)
 
 def savelocations(event):
     i = 0
-    f = open("demofile2.txt", "w")
+    f = open("Settings.txt", "w")
     while i < len(btnLights):
         #do something to all children
         print(i , btnLights[i].btnTheLight.winfo_rootx(),btnLights[i].btnTheLight.winfo_rooty())
-        f.write(str(i) + ',' + str(btnLights[i].btnTheLight.winfo_rootx())+ ',' + str(btnLights[i].btnTheLight.winfo_rooty()) + "\n")
+        f.write(str(i) + ',' + \
+        str(btnLights[i].btnTheLight.winfo_rootx())+ ',' + \
+        str(btnLights[i].btnTheLight.winfo_rooty())+ ',' + \
+        str(btnLights[i].get_type()) + "\n")
         i += 1
     f.close()
 
 def loadlocations():
     
-    f = open("demofile2.txt", "r")
+    f = open("Settings.txt", "r")
     #Lines = f.readlines()
     count = 0
     while True:
@@ -65,18 +70,26 @@ def loadlocations():
         btnLights.append(btnProperties())
         btnLights[int(linesplit[0])].set_x(int(linesplit[1]))
         btnLights[int(linesplit[0])].set_y(int(linesplit[2]))
-        addlight(count,img_parcan)
+        btnLights[int(linesplit[0])].set_type(linesplit[3])
+        addlight(count)
         count += 1
     f.close()
 
-def addlight(i,img1):
-
+def addlight(i):
+    if btnLights[i].get_type() == 'parcan':
+        img1 = img_parcan
+        x = i_parcanwidth
+        y = i_parcanheight
+    elif btnLights[i].get_type() == 'fresnel':
+        img1 = img_fresnel
+        x = i_fresnelwidth
+        y = i_fresnelheight
     btnLights[i].btnTheLight = tk.Button(
     #master=frame1,
     image=img1,
     text='btn' + str(i),
-    width=i_buttonwidth,
-    height=i_buttonheight,
+    width=x,
+    height=y,
     bg = bgcolor,
     fg = "yellow",
     

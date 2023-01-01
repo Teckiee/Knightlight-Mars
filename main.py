@@ -46,7 +46,7 @@ btnsave.place(x=860, y=60)
 
 btnaddparcan = tk.Button(
 master=frame1,
-text='Add Light',
+text='Add Parcan',
 bg=bgcolor,
 fg="black",
 )
@@ -55,7 +55,7 @@ btnaddparcan.place(x=800, y=1400)
 
 btnaddfresnel = tk.Button(
 master=frame1,
-text='Add Light',
+text='Add Fresnel',
 bg=bgcolor,
 fg="black",
 )

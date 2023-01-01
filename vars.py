@@ -6,9 +6,12 @@ from PIL import Image, ImageTk
 yoffset = 0 # titlebar
 xoffset = 1
 
-i_buttonx = 0
-i_buttonwidth = 33
-i_buttonheight = 50
+#i_buttonx = 0
+i_parcanwidth = 33
+i_parcanheight = 50
+
+i_fresnelwidth = 50
+i_fresnelheight = 50
 
 btnLights = []
 
@@ -18,19 +21,20 @@ window = Tk()
 
 
 image = Image.open('parcan.png')
-img=image.resize((i_buttonwidth, i_buttonheight))
+img=image.resize((i_parcanwidth, i_parcanheight))
 img_parcan = ImageTk.PhotoImage(img)
 
 image2 = Image.open('fresnel.png')
-img2=image2.resize((i_buttonwidth, i_buttonheight))
+img2=image2.resize((i_fresnelwidth, i_fresnelheight))
 img_fresnel = ImageTk.PhotoImage(img2)
 
 class btnProperties:
     btnTheLight = Button
-    def __init__(self, x=0, y=0, *args, **kwargs ):
+    def __init__(self, x=0, y=0, z='', *args, **kwargs ):
         #__init__(self, *args, **kwargs)
         self._x = x
         self._y = y
+        self._lighttype = z
 
     # getter method
     def get_x(self):
@@ -38,6 +42,9 @@ class btnProperties:
     
     def get_y(self):
         return self._y
+
+    def get_type(self):
+        return self._lighttype
 
     def get_btn(self):
         return self.Button
@@ -51,6 +58,9 @@ class btnProperties:
 
     def set_btn(self, x):
         self.Button = x
+    
+    def set_type(self, x):
+        self._lighttype = x
 
 
 #btnLocations = []
