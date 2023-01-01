@@ -1,4 +1,4 @@
-import tkinter as tk
+#import tkinter as tk
 from tkinter import *
 from PIL import Image, ImageTk
 
@@ -14,7 +14,7 @@ btnLights = []
 
 bgcolor = "#434343"
 
-window = tk.Tk()
+window = Tk()
 
 
 image = Image.open('C:\Google Drive\mark@wattsofsound\My Drive\GitHub\Knightlight-Mars\parcan.png')
@@ -26,7 +26,7 @@ img2=image2.resize((i_buttonwidth, i_buttonheight))
 img_fresnel = ImageTk.PhotoImage(img2)
 
 class btnProperties:
-    btnTheLight = tk.Button
+    btnTheLight = Button
     def __init__(self, x=0, y=0, *args, **kwargs ):
         #__init__(self, *args, **kwargs)
         self._x = x
