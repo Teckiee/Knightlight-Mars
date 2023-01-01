@@ -3,3 +3,4 @@ classtest.py
 buttontest.py
 testmove.py
 /__pycache__
+*.pyc

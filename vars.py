@@ -52,11 +52,16 @@ bgcolor = "#434343"
 
 window = Tk()
 
+
+i_btnlocationoffsetx = 0
+
+
 i_addbuttonoffsetx = 0
 btnfont = tkFont.Font (family='Segoe UI', size=9)
 
 if platform.system() == 'Linux':
     i_addbuttonoffsetx = 2
+    i_btnlocationoffsetx = 20
     btnfont = tkFont.Font(family='Segoe UI', size=8)
 
 

@@ -28,24 +28,24 @@ master=frame1,
 text='Quit',
 bg=bgcolor,
 fg="black",
-width=4,
-height=1,
+width=10-i_addbuttonoffsetx,
+height=4,
 font=btnfont
 )
 btnexit.bind("<Button-1>", quitme)
-btnexit.place(x=860-8-i_addbuttonoffsetx, y=8)
+btnexit.place(x=810-i_btnlocationoffsetx, y=8)
 
 btnsave = tk.Button(
 master=frame1,
 text='Save',
 bg=bgcolor,
 fg="black",
-width=4,
-height=1,
+width=10-i_addbuttonoffsetx,
+height=4,
 font=btnfont
 )
 btnsave.bind("<Button-1>", savelocations)
-btnsave.place(x=860-8-i_addbuttonoffsetx, y=60)
+btnsave.place(x=810-i_btnlocationoffsetx, y=1400)
 
 btnaddparcan = tk.Button(
 master=frame1,
