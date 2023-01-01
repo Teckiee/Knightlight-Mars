@@ -61,7 +61,7 @@ btnfont = tkFont.Font (family='Segoe UI', size=9)
 
 if platform.system() == 'Linux':
     i_addbuttonoffsetx = 2
-    i_btnlocationoffsetx = 20
+    i_btnlocationoffsetx = 10
     btnfont = tkFont.Font(family='Segoe UI', size=8)
 
 
