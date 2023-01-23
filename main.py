@@ -5,7 +5,7 @@ import keyboard
 from btnevents import *
 from vars import *
 
-#bg = PhotoImage(file = 'C:\Google Drive\mark@wattsofsound\My Drive\GitHub\Knightlight-Mars\theatre.png')
+# bg = PhotoImage(file = 'PAT.png')
 
 frame1 = tk.Frame(master=window, width=900, height=1600, bg=bgcolor)
 
@@ -14,6 +14,15 @@ frame1.pack(fill=tk.BOTH, side=tk.LEFT, expand=False)
 # Remove the Title bar of the window
 window.overrideredirect(True)
 
+label = tk.Label(
+image = img_floorplan,
+master=frame1,
+width=i_floorplanwidth,
+height=i_floorplanheight,
+)
+label.place(relx = 0,
+rely = 0,
+anchor = 'nw')
 
 #img_label = Label(image=img_parcan)
 

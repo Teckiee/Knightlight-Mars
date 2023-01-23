@@ -37,6 +37,9 @@ i_ledparcanheight = 50
 i_profilewidth = 50
 i_profileheight = 50
 
+i_floorplanwidth = 900
+i_floorplanheight = 1438
+
 #parcan
 #fresnel
 #wedge
@@ -96,6 +99,10 @@ img_washmovinghead = ImageTk.PhotoImage(imgwashmovinghead)
 imagewedge = Image.open('wedge.png')
 imgwedge=imagewedge.resize((i_wedgewidth, i_wedgeheight))
 img_wedge = ImageTk.PhotoImage(imgwedge)
+
+imagefloorplan = Image.open('PAT.png')
+imgfloorplan=imagefloorplan.resize((i_floorplanwidth, i_floorplanheight))
+img_floorplan = ImageTk.PhotoImage(imgfloorplan)
 
 
 class btnProperties:
