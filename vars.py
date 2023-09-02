@@ -2,15 +2,22 @@
 from tkinter import *
 from PIL import Image, ImageTk
 import platform
+import threading
 from tkinter import font as tkFont  # for convenience
 
 #yoffset = 31 # titlebar
 yoffset = 0 # titlebar
 xoffset = 1
 
+screena_width = 900
+screena_height = 1600
+
+screenb_width = 1024
+screenb_height = 600
 
 print(platform.system())
 
+serial_thread = threading.Thread
 
 #i_buttonx = 0
 i_parcanwidth = 33
@@ -55,8 +62,8 @@ bgcolor = "#434343"
 
 window = Tk()
 
-
 i_btnlocationoffsetx = 0
+i_btnlocationoffsety = 10
 
 
 i_addbuttonoffsetx = 0
