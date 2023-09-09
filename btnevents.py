@@ -19,7 +19,7 @@ def clicked(event, button_press):
     #x, y = event.x_root, event.y_root
     #print (x, y)
     #print(window.winfo_x(), window.winfo_y())
-        
+
     #command = clicked
 
 def quitme(event):
@@ -90,6 +90,21 @@ def clickbtnaddprofile(event):
     btnLights[i].set_type('profile')
     addlight(i)
 
+def clickbtnaddintimidator(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('intimidator')
+    addlight(i)
+	
+def clickbtnaddledpanel(event):
+    btnLights.append(btnProperties())
+    i = len(btnLights)-1
+    btnLights[i].set_x(0)
+    btnLights[i].set_y(0)
+    btnLights[i].set_type('ledpanel')
+    addlight(i)
 
 
 def savelocations(event):
@@ -118,7 +133,7 @@ def loadlocations():
         print(linesplit)
         #btnLocations.append()
         btnLights.append(btnProperties())
-        btnLights[int(linesplit[0])].set_x(int(linesplit[1]))
+        btnLights[int(linesplit[0])].set_x(int(linesplit[1])-w0)
         btnLights[int(linesplit[0])].set_y(int(linesplit[2]))
         btnLights[int(linesplit[0])].set_type(linesplit[3])
         addlight(count)
@@ -169,6 +184,14 @@ def addlight(i):
         img1 = img_profile
         x = i_profilewidth
         y = i_profileheight
+    elif btnLights[i].get_type() == 'intimidator':
+        img1 = img_intimidator
+        x = i_intimidatorwidth
+        y = i_intimidatorheight
+    elif btnLights[i].get_type() == 'ledpanel':
+        img1 = img_ledpanel
+        x = i_ledpanelwidth
+        y = i_ledpanelheight
 
   
 

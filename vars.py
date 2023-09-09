@@ -2,22 +2,20 @@
 from tkinter import *
 from PIL import Image, ImageTk
 import platform
-import threading
 from tkinter import font as tkFont  # for convenience
 
 #yoffset = 31 # titlebar
 yoffset = 0 # titlebar
 xoffset = 1
 
-screena_width = 900
-screena_height = 1600
-
-screenb_width = 1024
-screenb_height = 600
 
 print(platform.system())
 
-serial_thread = threading.Thread
+w0, h0 = 1024, 600
+w1, h1 = 1024, 600
+w2, h2 = 900, 1600
+
+window = Tk()
 
 #i_buttonx = 0
 i_parcanwidth = 33
@@ -44,6 +42,12 @@ i_ledparcanheight = 50
 i_profilewidth = 50
 i_profileheight = 50
 
+i_intimidatorwidth = 50
+i_intimidatorheight = 50
+
+i_ledpanelwidth = 50
+i_ledpanelheight = 50
+
 i_floorplanwidth = 900
 i_floorplanheight = 1438
 
@@ -60,10 +64,10 @@ btnLights = []
 
 bgcolor = "#434343"
 
-window = Tk()
+
 
 i_btnlocationoffsetx = 0
-i_btnlocationoffsety = 10
+i_btnlocationoffsety = 160
 
 
 i_addbuttonoffsetx = 0
@@ -99,6 +103,10 @@ imageprofile = Image.open('profile.png')
 imgprofile=imageprofile.resize((i_profilewidth, i_profileheight))
 img_profile = ImageTk.PhotoImage(imgprofile)
 
+imageintimidator = Image.open('intimidator.png')
+imgintimidator=imageintimidator.resize((i_intimidatorwidth, i_intimidatorheight))
+img_intimidator = ImageTk.PhotoImage(imgintimidator)
+
 imagewashmovinghead = Image.open('washmovinghead.png')
 imgwashmovinghead=imagewashmovinghead.resize((i_washmovingheadwidth, i_washmovingheadheight))
 img_washmovinghead = ImageTk.PhotoImage(imgwashmovinghead)
@@ -106,6 +114,10 @@ img_washmovinghead = ImageTk.PhotoImage(imgwashmovinghead)
 imagewedge = Image.open('wedge.png')
 imgwedge=imagewedge.resize((i_wedgewidth, i_wedgeheight))
 img_wedge = ImageTk.PhotoImage(imgwedge)
+
+imageledpanel = Image.open('ledpanel.png')
+imgledpanel=imageledpanel.resize((i_ledpanelwidth, i_ledpanelheight))
+img_ledpanel = ImageTk.PhotoImage(imgledpanel)
 
 imagefloorplan = Image.open('PAT.png')
 imgfloorplan=imagefloorplan.resize((i_floorplanwidth, i_floorplanheight))
