@@ -9,7 +9,7 @@
 8,1787,987,parcan
 9,1131,986,parcan
 10,1677,666,parcan
-11,1380,671,fresnel
+11,1383,646,fresnel
 12,1388,346,washmovinghead
 13,1792,947,wedge
 14,1462,223,mirrorball
@@ -25,7 +25,12 @@
 24,1244,336,ledparcan
 25,1128,337,ledparcan
 26,1768,336,ledparcan
-27,1674,466,profile
+27,1677,464,profile
 28,1286,634,intimidator
 29,1617,658,intimidator
-30,1240,692,ledpanel
+30,1231,727,ledpanel
+31,1509,331,intimidator
+32,1433,335,intimidator
+33,1665,721,ledpanel
+34,1512,723,ledpanel
+35,1380,725,ledpanel
