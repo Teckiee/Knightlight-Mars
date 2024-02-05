@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import *
 import keyboard
 from PIL import Image, ImageTk
+import socket
 
 def drag(event):
     if keyboard.is_pressed("shift"):
@@ -140,6 +141,24 @@ def loadlocations():
         count += 1
     f.close()
 
+def start_server():
+    host = '127.0.0.1'
+    port = 12345
+
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind((host, port))
+        s.listen()
+        conn, addr = s.accept()
+        with conn:
+            print(f"Connected by {addr}")
+            while True:
+                data = conn.recv(1024)
+                datatext = data.decode('utf-8')
+                print(f"Received data: {datatext}")
+                if not data:
+                    break
+                conn.sendall(data)
+
 def loadlocationsloadtest():
     count = 0
     while count < 2000:
@@ -193,8 +212,7 @@ def addlight(i):
         x = i_ledpanelwidth
         y = i_ledpanelheight
 
-  
-
+        
     btnLights[i].btnTheLight = tk.Button(
     #master=frame1,
     image=img1,
@@ -203,9 +221,139 @@ def addlight(i):
     height=y,
     bg = bgcolor,
     fg = "yellow",
-    
+
     ) #command=lambda m=i: which_button(m)
     btnLights[i].btnTheLight.bind("<B1-Motion>", drag)
     #btnLights[i].bind("<Button-1>", clicked)
     btnLights[i].btnTheLight.bind("<Button-1>", lambda event, m=i: clicked(event,m))
     btnLights[i].btnTheLight.place(x=btnLights[i].get_x(), y=btnLights[i].get_y())
+
+def addlightbuttons(oframe):
+    btnaddparcan = tk.Button(
+    master=oframe,
+    text='Add Parcan',
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddparcan.bind("<Button-1>", clickbtnaddparcan)
+    btnaddparcan.place(x=20, y=h2-i_btnlocationoffsety)
+
+    btnaddfresnel = tk.Button(
+    master=oframe,
+    text='Add Fresnel',
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddfresnel.bind("<Button-1>", clickbtnaddfresnel)
+    btnaddfresnel.place(x=100, y=h2-i_btnlocationoffsety)
+
+    btnaddwedge = tk.Button(
+    master=oframe,
+    text='Add wedge',
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddwedge.bind("<Button-1>", clickbtnaddwedge)
+    btnaddwedge.place(x=180, y=h2-i_btnlocationoffsety)
+
+    btnaddwashmovinghead = tk.Button(
+    master=oframe,
+    text='Add wash moving head',
+    wraplength=80,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddwashmovinghead.bind("<Button-1>", clickbtnaddwashmovinghead)
+    btnaddwashmovinghead.place(x=260, y=h2-i_btnlocationoffsety)
+
+    btnaddmirrorball = tk.Button(
+    master=oframe,
+    text='Add mirrorball',
+    wraplength=80,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddmirrorball.bind("<Button-1>", clickbtnaddmirrorball)
+    btnaddmirrorball.place(x=340, y=h2-i_btnlocationoffsety)
+
+    btnaddledsinglefloor = tk.Button(
+    master=oframe,
+    text='Add led single floor',
+    wraplength=80,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddledsinglefloor.bind("<Button-1>", clickbtnaddledsinglefloor)
+    btnaddledsinglefloor.place(x=420, y=h2-i_btnlocationoffsety)
+
+    btnaddledparcan = tk.Button(
+    master=oframe,
+    text='Add led parcan',
+    wraplength=80,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddledparcan.bind("<Button-1>", clickbtnaddledparcan)
+    btnaddledparcan.place(x=500, y=h2-i_btnlocationoffsety)
+
+    btnaddprofile = tk.Button(
+    master=oframe,
+    text='Add profile',
+    wraplength=80,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddprofile.bind("<Button-1>", clickbtnaddprofile)
+    btnaddprofile.place(x=580, y=h2-i_btnlocationoffsety)
+
+    btnaddintimidator = tk.Button(
+    master=oframe,
+    text='Add Intimidator',
+    wraplength=72,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddintimidator.bind("<Button-1>", clickbtnaddintimidator)
+    btnaddintimidator.place(x=660, y=h2-i_btnlocationoffsety)
+
+    btnaddledpanel = tk.Button(
+    master=oframe,
+    text='Add LEDPanel',
+    wraplength=80,
+    bg='black',
+    fg="white",
+    width=10-i_addbuttonoffsetx,
+    height=4,
+    font=btnfont
+    )
+    btnaddledpanel.bind("<Button-1>", clickbtnaddledpanel)
+    btnaddledpanel.place(x=20, y=h2+65-i_btnlocationoffsety)
+
+

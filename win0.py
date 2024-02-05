@@ -38,7 +38,7 @@ height=4,
 font=btnfont
 )
 btnexit.bind("<Button-1>", quitme)
-btnexit.place(x=wx-20-i_btnlocationoffsetx, y=8)
+btnexit.place(x=wx-100-i_btnlocationoffsetx, y=8)
 
 btnsave = tk.Button(
 master=frame1,
@@ -50,7 +50,7 @@ height=4,
 font=btnfont
 )
 btnsave.bind("<Button-1>", savelocations)
-btnsave.place(x=wx-20-i_btnlocationoffsetx, y=wy-20)
+btnsave.place(x=wx-100-i_btnlocationoffsetx, y=wy-100)
 
 window.mainloop()
 

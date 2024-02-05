@@ -9,13 +9,15 @@ yoffset = 0 # titlebar
 xoffset = 1
 
 
-print(platform.system())
+# print(platform.system())
 
 w0, h0 = 1024, 600
 w1, h1 = 1024, 600
 w2, h2 = 900, 1600
 
-window = Tk()
+win2 = Tk()
+win0 = Tk()
+win1 = Tk()
 
 #i_buttonx = 0
 i_parcanwidth = 33
