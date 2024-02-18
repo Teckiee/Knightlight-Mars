@@ -5,7 +5,7 @@ from vars import *
 def startserial():
 	try:
 		# Configure the serial port settings (replace '/dev/ttyUSB0' with the correct device path)
-		ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+		ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=10)
 
 		while True:
 			
@@ -30,4 +30,4 @@ def startserial():
 	finally:
 		ser.close()
 
-
+startserial()

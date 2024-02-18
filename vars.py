@@ -3,6 +3,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 import platform
 from tkinter import font as tkFont  # for convenience
+import serial
 
 #yoffset = 31 # titlebar
 yoffset = 0 # titlebar
@@ -11,13 +12,15 @@ xoffset = 1
 
 # print(platform.system())
 
+ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+
 w0, h0 = 1024, 600
 w1, h1 = 1024, 600
 w2, h2 = 900, 1600
 
 win2 = Tk()
 win0 = Tk()
-win1 = Tk()
+#win1 = Tk()
 
 #i_buttonx = 0
 i_parcanwidth = 33
@@ -62,9 +65,14 @@ i_floorplanheight = 1438
 #ledparcan
 #profile
 
+received_data = None
+
 btnLights = []
+cMusicPlayers = []
 
 bgcolor = "#434343"
+
+buttonlocationslocked = 1
 
 
 
@@ -73,6 +81,7 @@ i_btnlocationoffsety = 160
 
 
 i_addbuttonoffsetx = 0
+
 btnfont = tkFont.Font (family='Segoe UI', size=9)
 
 if platform.system() == 'Linux':
@@ -160,6 +169,36 @@ class btnProperties:
     def set_type(self, x):
         self._lighttype = x
 
+class cMusicPlayer:
+    btnCue = Button
+    btnPlayPause = Button
+    btnStop = Button
+    lblSongName = Label
+    def __init__(self, x=0, y=0, z=-1, *args, **kwargs ):
+        #__init__(self, *args, **kwargs)
+        self._x = x
+        self._y = y
+        self._MusicCueIndex = z
+
+    # getter method
+    def get_x(self):
+        return self._x
+    
+    def get_y(self):
+        return self._y
+
+    def get_musiccueindex(self):
+        return self._MusicCueIndex
+
+    # setter method
+    def set_x(self, x):
+        self._x = x
+    
+    def set_y(self, x):
+        self._y = x
+    
+    def set_musiccueindex(self, x):
+        self._MusicCueIndex = x
 
 #btnLocations = []
 #for i in range(0,6):
